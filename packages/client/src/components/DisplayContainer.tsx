@@ -10,7 +10,7 @@ type CoinDisplayContext = {
 
 export const CoinContext = createContext<CoinDisplayContext>({
 	coinMap: null,
-	getCoinsFromAmount: () => {}
+	getCoinsFromAmount: () => {},
 });
 
 export default function DisplayContainer({
