@@ -29,7 +29,7 @@ export default function CoinForm() {
 				ref={register({
 					required: true,
 					// TODO::073120 Is pattern matching required for input?
-					// TODO::080120 If I18n is required this'll need to change
+					// TODO::080120 If I18n is required this regex will need to change
 					pattern: {
 						value: /^\$?[0-9,]*(\.[0-9]+)?$/,
 						message:
@@ -41,7 +41,7 @@ export default function CoinForm() {
 				inputMode="numeric"
 				name="currency"
 			/>
-			{errorMessage ? <p>{errorMessage}</p> : null}
+			{errorMessage ? <p role="alert">{errorMessage}</p> : null}
 			<button disabled={!!errorMessage} type="submit">
 				submit
 			</button>
