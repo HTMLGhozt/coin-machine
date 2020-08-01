@@ -1,12 +1,13 @@
 import Koa from 'koa';
+import bodyParser from 'koa-bodyparser';
+import convertCurrencyRouter from './endpoints/convertCurrency';
 
 const app = new Koa();
 
-app.use(async function (ctx) {
-	ctx.body = 'Hello World';
-});
+app.use(bodyParser());
+app.use(convertCurrencyRouter.routes());
 
-const port = process.env.PORT || 8000;
+const port = process.env.PORT || '8000';
 
 app.listen(port, () => {
 	console.info(`Running on port: ${port}`);
