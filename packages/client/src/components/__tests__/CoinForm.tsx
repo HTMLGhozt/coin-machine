@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, fireEvent } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import CoinForm from '../CoinForm';
 
 test('renders an input with a label "Dollar Amount"', () => {
