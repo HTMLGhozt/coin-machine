@@ -52,5 +52,4 @@ This project is licensed under the MIT License
 ## Acknowledgments
 
 * Hat tip to anyone whose code was used
-* Inspiration
-* etc
+* The opportunity to take this exercise
