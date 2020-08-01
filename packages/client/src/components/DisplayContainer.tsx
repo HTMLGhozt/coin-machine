@@ -8,6 +8,10 @@ type CoinDisplayContext = {
 	getCoinsFromAmount: (amount: number) => void;
 };
 
+// I don't think a context is really needed here for the size of
+// the application, but I haven't really tested context with 
+// react-testing-library
+
 export const CoinContext = createContext<CoinDisplayContext>({
 	coinMap: null,
 	getCoinsFromAmount: () => {},
