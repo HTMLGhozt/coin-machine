@@ -1,6 +1,8 @@
 export const numberFormatter = new Intl.NumberFormat('en-US', {
 	style: 'currency',
 	currency: 'USD',
+	// @ts-ignore
+	signDisplay: 'never'
 });
 
 export default function formatCurrency(amount: number | string) {
@@ -9,5 +11,5 @@ export default function formatCurrency(amount: number | string) {
 		amount = amount.replace(/[$,]+/g, '');
 		if (Number.isNaN(+amount)) return amount;
 	}
-	return numberFormatter.format(+amount);
+	return numberFormatter.format(+amount).substr(1);
 }
