@@ -14,7 +14,7 @@ export default function CoinForm() {
 		if (currency) {
 			setValue('currency', formatCurrency(currency));
 		}
-	}
+	};
 
 	return (
 		<form
@@ -42,7 +42,9 @@ export default function CoinForm() {
 				name="currency"
 			/>
 			{errorMessage ? <p>{errorMessage}</p> : null}
-			<button disabled={!!errorMessage} type="submit">submit</button>
+			<button disabled={!!errorMessage} type="submit">
+				submit
+			</button>
 		</form>
 	);
 }
