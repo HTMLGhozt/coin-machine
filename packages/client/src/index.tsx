@@ -5,4 +5,9 @@ import App from './App';
 const element = document.createElement('div');
 document.body.appendChild(element);
 
-render(<App />, element);
+render(
+	<React.StrictMode>
+		<App />
+	</React.StrictMode>, 
+	element
+);
