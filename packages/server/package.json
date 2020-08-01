@@ -1,19 +1,19 @@
 {
-  "name": "@coin-machine/server",
-  "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT",
-  "scripts": {
-    "dev:start": "ts-node-dev --respawn ./src/index.ts"
-  },
-  "dependencies": {
-    "koa": "^2.13.0",
-    "koa-bodyparser": "^4.3.0"
-  },
-  "devDependencies": {
-    "@types/koa": "^2.11.3",
-    "cross-env": "^7.0.2",
-    "ts-node-dev": "^1.0.0-pre.56",
-    "typescript": "^3.9.7"
-  }
+	"name": "@coin-machine/server",
+	"version": "1.0.0",
+	"main": "index.js",
+	"license": "MIT",
+	"scripts": {
+		"dev:start": "ts-node-dev --respawn ./src/index.ts"
+	},
+	"dependencies": {
+		"koa": "^2.13.0",
+		"koa-bodyparser": "^4.3.0"
+	},
+	"devDependencies": {
+		"@types/koa": "^2.11.3",
+		"cross-env": "^7.0.2",
+		"ts-node-dev": "^1.0.0-pre.56",
+		"typescript": "^3.9.7"
+	}
 }
