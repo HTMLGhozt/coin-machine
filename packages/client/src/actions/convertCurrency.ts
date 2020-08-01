@@ -1,4 +1,4 @@
-export async function convertCurrency(amount: number) {
+export async function convertCurrency(amount: string | number) {
 	const response = await fetch('/api/convert-currency', {
 		method: 'POST',
 		headers: {
