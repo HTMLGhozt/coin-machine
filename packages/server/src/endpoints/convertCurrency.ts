@@ -1,7 +1,9 @@
 import Router from '@koa/router';
 import amountToCoins from '../utils/amountToCoins';
 
-const router = new Router();
+const router = new Router({
+	prefix: '/api'
+});
 
 router.post('/convert-currency', (ctx): void => {
 	const { currency } = ctx.request.body;

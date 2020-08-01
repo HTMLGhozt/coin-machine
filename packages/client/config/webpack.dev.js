@@ -9,6 +9,9 @@ module.exports = merge(common, {
 	devtool: 'inline-souce-map',
 	devServer: {
 		contentBase: BUILD,
+		proxy: {
+			'/api': 'http://localhost:8000',
+		},
 	},
 	output: {
 		path: BUILD,

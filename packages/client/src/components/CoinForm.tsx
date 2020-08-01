@@ -1,13 +1,17 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useForm } from 'react-hook-form';
-import getError from './utils/getError';
+import getError from '../utils/getError';
+import { CoinContext } from './DisplayContainer';
 
 export default function CoinForm() {
 	const { register, handleSubmit, errors } = useForm();
+	const { getCoinsFromAmount } = useContext(CoinContext);
 	const errorMessage = getError({ name: 'currency', errors });
 
 	return (
-		<form onSubmit={handleSubmit(() => {})}>
+		<form
+			onSubmit={handleSubmit(({ currency }) => (getCoinsFromAmount(currency)))}
+		>
 			<label htmlFor="currency">Dollar Amount</label>
 			<input
 				id="currency"
@@ -15,7 +19,7 @@ export default function CoinForm() {
 					required: true,
 					// TODO::073020 Is pattern matching required for input?
 					pattern: {
-						value: /(?=.*\d)^\$?(([1-9]\d{0,2}(,\d{3})*)|0)?(\.\d{1,2})?$/,
+						value: /[0-9,.]*/,
 						message:
 							'The input must be formatted like a currency (ex $100.00 or 100 or 1000)',
 					},
@@ -25,7 +29,7 @@ export default function CoinForm() {
 				name="currency"
 			/>
 			{errorMessage ? (
-				<p className="mt-2 text-sm text-red-600">{errorMessage}</p>
+				<p>{errorMessage}</p>
 			) : null}
 			<button type="submit">submit</button>
 		</form>
