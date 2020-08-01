@@ -5,9 +5,9 @@ import convertCurrencyRouter from './endpoints/convertCurrency';
 const app = new Koa();
 
 app.use(bodyParser());
-app.use(convertCurrencyRouter.routes())
+app.use(convertCurrencyRouter.routes());
 
-const port = process.env.PORT || "8000";
+const port = process.env.PORT || '8000';
 
 app.listen(port, () => {
 	console.info(`Running on port: ${port}`);

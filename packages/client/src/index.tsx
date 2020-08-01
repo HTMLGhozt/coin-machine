@@ -10,6 +10,6 @@ render(
 	// https://mariosfakiolas.com/blog/my-react-components-render-twice-and-drive-me-crazy/
 	<React.StrictMode>
 		<App />
-	</React.StrictMode>, 
-	element
+	</React.StrictMode>,
+	element,
 );
