@@ -3,7 +3,7 @@ import amountToCoins from '../utils/amountToCoins';
 import currencyToFloat from '../utils/currencyToFloat';
 
 const router = new Router({
-	prefix: '/api'
+	prefix: '/api',
 });
 
 router.post('/convert-currency', (ctx): void => {

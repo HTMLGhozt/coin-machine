@@ -4,12 +4,15 @@
 	"main": "index.js",
 	"license": "MIT",
 	"scripts": {
-		"dev:start": "ts-node-dev --respawn --transpile-only ./src/index.ts"
+		"dev:start": "ts-node-dev --respawn --transpile-only ./src/index.ts",
+		"test": "ts-node node_modules/.bin/tape '**/__tests__/*.ts'"
 	},
 	"dependencies": {
 		"@koa/router": "^9.3.1",
+		"@types/tape": "^4.13.0",
 		"koa": "^2.13.0",
-		"koa-bodyparser": "^4.3.0"
+		"koa-bodyparser": "^4.3.0",
+		"tape": "^5.0.1"
 	},
 	"devDependencies": {
 		"@types/koa": "^2.11.3",

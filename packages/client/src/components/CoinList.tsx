@@ -8,7 +8,10 @@ export default function CoinList() {
 		<ul className="my-4">
 			{coinMap
 				? Object.entries(coinMap).map(([key, value]) => (
-						<li className="my-1 p-2 hover:bg-green-100 transition-colors ease-in-out duration-300 rounded-md" key={key}>
+						<li
+							className="my-1 p-2 hover:bg-green-100 transition-colors ease-in-out duration-300 rounded-md"
+							key={key}
+						>
 							{key}: {value}
 						</li>
 				  ))

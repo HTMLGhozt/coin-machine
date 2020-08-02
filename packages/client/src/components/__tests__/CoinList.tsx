@@ -3,13 +3,13 @@ import { render } from '@testing-library/react';
 import { CoinContext } from '../DisplayContainer';
 import CoinList from '../CoinList';
 
-const testList = { 
-	"silver-dollar": 0,
-	"half-dollar": 1,
-	"quarter": 1,
-	"dime": 2,
-	"nickel": 0,
-	"penny": 4
+const testList = {
+	'silver-dollar': 0,
+	'half-dollar': 1,
+	quarter: 1,
+	dime: 2,
+	nickel: 0,
+	penny: 4,
 };
 
 test('Given a list of records it should render all of them', () => {
