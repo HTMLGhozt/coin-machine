@@ -2,7 +2,7 @@ export const numberFormatter = new Intl.NumberFormat('en-US', {
 	style: 'currency',
 	currency: 'USD',
 	// @ts-ignore
-	signDisplay: 'never'
+	signDisplay: 'never',
 });
 
 export default function formatCurrency(amount: number | string) {

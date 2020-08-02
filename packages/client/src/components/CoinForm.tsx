@@ -9,7 +9,7 @@ const Input = createFormComponent(TextField);
 
 export default function CoinForm() {
 	const { getCoinsFromAmount } = useContext(CoinContext);
-	
+
 	// TODO:: with the form refactor we no longer have as direct access
 	// to form state, instead we're reformatting when we submit.
 	return (

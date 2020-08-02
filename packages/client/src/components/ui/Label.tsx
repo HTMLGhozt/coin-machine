@@ -1,6 +1,12 @@
 import React from 'react';
 
-export default function Label({ name, children }: { name: string, children: React.ReactNode }) {
+export default function Label({
+	name,
+	children,
+}: {
+	name: string;
+	children: React.ReactNode;
+}) {
 	return (
 		<label
 			htmlFor={name}

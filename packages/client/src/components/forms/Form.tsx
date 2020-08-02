@@ -15,7 +15,6 @@ export default function Form<T = Values>({
 }: Props<T>) {
 	const form = useForm<T>();
 
-
 	return (
 		<FormProvider {...form}>
 			<form onSubmit={form.handleSubmit(onSubmit)} {...props}>

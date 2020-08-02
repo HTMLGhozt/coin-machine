@@ -14,7 +14,7 @@ export default function FormItem({
 }) {
 	return (
 		<>
-			<Label name={name}>{label}</ Label>
+			<Label name={name}>{label}</Label>
 			{children}
 			{error ? (
 				<p className="mt-2 text-sm text-red-600" role="alert">

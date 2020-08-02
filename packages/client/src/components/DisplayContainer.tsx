@@ -14,7 +14,7 @@ type CoinDisplayContext = {
 // react-testing-library
 
 export const CoinContext = createContext<CoinDisplayContext>({
-	coinMap: {"silver-dollar":124,"half-dollar":0,"quarter":0,"dime":1,"nickel":0,"penny":0},
+	coinMap: null,
 	getCoinsFromAmount: () => {},
 });
 
