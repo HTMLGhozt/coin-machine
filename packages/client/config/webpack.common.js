@@ -31,7 +31,7 @@ module.exports = {
 			filename: 'main.css',
 		}),
 		new HtmlWebpackPlugin({
-			title: 'Development',
+			title: 'Coin Machine',
 		}),
 	],
 	output: {
