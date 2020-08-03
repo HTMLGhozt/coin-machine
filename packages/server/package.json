@@ -6,7 +6,7 @@
 	"scripts": {
 		"dev:start": "ts-node-dev --respawn --transpile-only ./src/index.ts",
 		"build": "tsc-silent --suppress -p ./tsconfig.json --compiler ../../node_modules/typescript/lib/typescript.js",
-		"start": "cross-env NODE_ENV=production ts-node ./src/index.js",
+		"start": "cross-env NODE_ENV=production node ./src/index.js",
 		"test": "ts-node node_modules/.bin/tape '**/__tests__/*.ts'"
 	},
 	"dependencies": {
