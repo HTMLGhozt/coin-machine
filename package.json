@@ -15,6 +15,10 @@
 		"test": "run-s test:*",
 		"test:client": "yarn --cwd \"./packages/client\" test",
 		"test:server": "yarn --cwd \"./packages/server\" test",
+		"build": "run-p build:*",
+		"build:client": "yarn --cwd \"./packages/client\" build",
+		"build:server": "yarn --cwd \"./packages/server\" build",
+		"start": "yarn --cwd \"./packages/server\" start",
 		"prettier": "prettier --write ./"
 	},
 	"husky": {

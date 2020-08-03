@@ -5,23 +5,28 @@
 	"license": "MIT",
 	"scripts": {
 		"dev:start": "ts-node-dev --respawn --transpile-only ./src/index.ts",
+		"build": "tsc ./src/index.ts",
+		"start": "cross-env NODE_ENV=production node ./src/index.js",
 		"test": "ts-node node_modules/.bin/tape '**/__tests__/*.ts'"
 	},
 	"dependencies": {
 		"@koa/router": "^9.3.1",
+		"cross-env": "^7.0.2",
 		"koa": "^2.13.0",
-		"koa-bodyparser": "^4.3.0"
+		"koa-bodyparser": "^4.3.0",
+		"koa-static": "^5.0.0"
 	},
 	"devDependencies": {
 		"@types/koa": "^2.11.3",
 		"@types/koa-bodyparser": "^4.3.0",
+		"@types/koa-static": "^4.0.1",
 		"@types/koa__router": "^8.0.2",
 		"@types/supertest": "^2.0.10",
 		"@types/tape": "^4.13.0",
 		"cross-env": "^7.0.2",
 		"supertest": "^4.0.2",
-		"ts-node-dev": "^1.0.0-pre.56",
 		"tape": "^5.0.1",
+		"ts-node-dev": "^1.0.0-pre.56",
 		"typescript": "^3.9.7"
 	}
 }

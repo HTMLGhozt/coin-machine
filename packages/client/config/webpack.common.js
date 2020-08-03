@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
 	entry: './src/index.tsx',
@@ -13,15 +14,11 @@ module.exports = {
 			{
 				test: /\.css$/i,
 				use: [
-					'style-loader',
-					{ loader: 'css-loader', options: { importLoaders: 1 } },
 					{
-						loader: 'postcss-loader',
-						options: {
-							ident: 'postcss',
-							plugins: [require('tailwindcss'), require('autoprefixer')],
-						},
+						loader: MiniCssExtractPlugin.loader,
 					},
+					'css-loader',
+					'postcss-loader',
 				],
 			},
 		],
@@ -30,12 +27,15 @@ module.exports = {
 		extensions: ['.tsx', '.ts', '.js'],
 	},
 	plugins: [
+		new MiniCssExtractPlugin({
+			filename: 'main.css',
+		}),
 		new HtmlWebpackPlugin({
 			title: 'Development',
 		}),
 	],
 	output: {
 		filename: 'bundle.js',
-		path: path.resolve(__dirname, 'dist'),
+		path: path.resolve(__dirname, '../dist'),
 	},
 };
