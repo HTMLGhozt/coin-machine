@@ -13,7 +13,7 @@ router.post('/convert-currency', (ctx): void => {
 	// https://0.30000000000000004.com/
 	const total = currencyToFloat(currency) * 100;
 	if (Number.isNaN(total)) {
-		ctx.throw(422, { error: "Currency couldn't be converted to a number." });
+		ctx.throw(422, "Currency couldn't be converted to a number.");
 	}
 
 	ctx.body = amountToCoins(total);

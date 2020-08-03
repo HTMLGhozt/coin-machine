@@ -9,6 +9,10 @@ app.use(convertCurrencyRouter.routes());
 
 const port = process.env.PORT || '8000';
 
-app.listen(port, () => {
-	console.info(`Running on port: ${port}`);
-});
+if (require.main === module) {
+	app.listen(port, () => {
+		console.info(`Running on port: ${port}`);
+	});
+}
+
+export default app;
