@@ -3,6 +3,8 @@
 	"compilerOptions": {
 		"rootDir": "./src/",
 		"lib": ["esnext", "es2017.object"],
+		"target": "es2016",	
+		"module": "commonjs"
 	},
 	"strict": true,
 	"include": ["src/"],
